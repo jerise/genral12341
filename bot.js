@@ -1,4 +1,3 @@
-const Canvas = require('canvas-prebuilt'); // Canvas Package for photo stuffs
 const Discord = require('discord.js');
 const { Client, Util } = require('discord.js');
 const client = new Discord.Client();
