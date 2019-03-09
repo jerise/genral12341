@@ -274,6 +274,42 @@ client.on('message', message => {
 //----------------------------------- = [ for all ] = -----------------------------------\\
 
 
+  client.on('message', message => {
+    if(message.content.startsWith(prefix+'help')) {
+   const embed = new Discord.RichEmbed()
+.setColor('RANDOM')
+        .setDescription(`**
+╭━━╮╱╱╱╭╮
+┃╭╮┃╱╱╭╯╰╮
+┃╰╯╰┳━┻╮╭╯
+┃╭━╮┃╭╮┃┃
+┃╰━╯┃╰╯┃╰╮
+╰━━━┻━━┻━╯
+=-=-=-=-=  General's Commands.  =-=-=-=-=
+『 ${prefix}roll <number> ➾ roll』
+『 ${prefix}member ➾ Member Information』
+『 ${prefix}server - Basic Information About Server :scroll:』
+『 ${prefix}id - your id  :flashlight:』
+『 ${prefix}avatar - Your profile picture :frame_photo:』
+『 ${prefix}user ➾ your information』
+『 ${prefix}ping ➾ View the speed of the bot connection』
+ 
+`)
+    message.author.send(embed)
+}
+});
+
+
+     
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done" , " We have been sent to your")
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 client.login(process.env.BOT_TOKEN);
